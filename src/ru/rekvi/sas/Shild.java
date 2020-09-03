@@ -15,7 +15,7 @@ package ru.rekvi.sas;
 public class Shild {
     public static void main(String args[]) {
         System.out.println("\"Матрица\" находится в файле C:\\video\\matrix.avi\\");
-        System.out.println("prog\tlang.su --> \\t - табуляция");
+        System.out.println("laba\rant --> \\t - табуляция");
         System.out.println("prog\blang.su --> \\b - возврат на один шаг назад");
         System.out.println("prog\nlang.su --> \\n - новая строка");
         System.out.println("prog\rlang.su --> \\r - возврат каретки");

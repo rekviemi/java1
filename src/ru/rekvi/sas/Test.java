@@ -2,14 +2,17 @@ package ru.rekvi.sas;
 
 class Test {
     public static void main(String[] args) {
-        System.out.println(fractional(1.53));
-        System.out.println(fractional(0.0));
-        System.out.println(fractional(1.0));
-        System.out.println(fractional(98.45));
-    }
-    static double fractional(double num){
 
-        return (num % 1);
+        int a = 123 / 100;
+        int b = 123 / 10 % 10;
+        int c = 123 % 10;
+
+        System.out.print(c);
+        System.out.print(b);
+        System.out.print(a);
+
+
     }
+
 }
 

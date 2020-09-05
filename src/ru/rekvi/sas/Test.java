@@ -11,10 +11,10 @@ class Test {
         int b = number / 10 % 10;
         int c = number % 10;
 
-        System.out.print(c);
-        System.out.print(b);
-        System.out.print(a);
-        return a + b + c;
+        //System.out.print(c);
+        // System.out.print(b);
+        // System.out.print(a);
+        return 'c' + 'b' + 'a';
     }
 
 }

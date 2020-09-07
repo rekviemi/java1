@@ -9,11 +9,6 @@ class ReverseDigits {
             int a = number / 100;
             int b = number / 10 % 10;
             int c = number % 10;
-
-            //System.out.print(c);
-            //System.out.print(b);
-            //System.out.print(a);
-            return 'c' + 'b' + 'a';
-
+            return (c * 100) + (b * 10) + a;
         }
     }

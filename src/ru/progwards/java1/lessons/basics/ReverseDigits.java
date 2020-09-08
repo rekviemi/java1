@@ -1,10 +1,9 @@
 package ru.progwards.java1.lessons.basics;
 
 class ReverseDigits {
-    public static void main(String[] args){}
+    public static void main(String[] args){
 
-
-
+    }
         public static int reverseDigits( int number){
             int a = number / 100;
             int b = number / 10 % 10;

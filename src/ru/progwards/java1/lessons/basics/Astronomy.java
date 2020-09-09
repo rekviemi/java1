@@ -34,4 +34,13 @@ public class Astronomy {
        double s3 = (4 * 3.14) * (r * r);
        return s3;
    }
+    public static Double earthVsMercury(){
+        double r = 1;
+        return r;
+    }
+
+    public static Double earthVsJupiter(){
+        double r = 1;
+        return r;
+    }
 }

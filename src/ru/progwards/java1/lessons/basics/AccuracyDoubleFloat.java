@@ -17,11 +17,11 @@ public class AccuracyDoubleFloat {
     return t;
     }
 
-   // public static double calculateAccuracy(double radius){
-     //   double d = (float) radius;
-    //    double s = volumeBallDouble(6371.1);
-    //    float s1 = volumeBallFloat(6371.1F);
-    //    double s2 = s / s1;
-     //   return s2;
-   // }
+   public static double calculateAccuracy(double radius){
+        double d = (float) radius;
+        double s = volumeBallDouble(6371.1);
+        float s1 = volumeBallFloat(6371.1F);
+       double s2 = s / s1;
+        return s2;
+   }
 }

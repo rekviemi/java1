@@ -4,7 +4,7 @@ public class AccuracyDoubleFloat {
     public static void main(String[] args) {
         System.out.println(volumeBallDouble(6371.1));
         System.out.println(volumeBallFloat(6371.1F));
-
+        System.out.println(calculateAccuracy(6371.1));
     }
 
     public static double volumeBallDouble(double radius){
@@ -18,10 +18,11 @@ public class AccuracyDoubleFloat {
     }
 
    public static double calculateAccuracy(double radius){
-        double d = (float) radius;
-        double s = volumeBallDouble(6371.1);
-        float s1 = volumeBallFloat(6371.1F);
-       double s2 = s / s1;
-        return s2;
+       double a = volumeBallDouble( 6371.1);
+       float b = (float) a;
+       float c = volumeBallFloat(6371.1F);
+       double d = b / c;
+       return d;
+
    }
 }

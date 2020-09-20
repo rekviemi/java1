@@ -5,6 +5,7 @@ public class AccuracyDoubleFloat {
         System.out.println(volumeBallDouble(6371.1));
         System.out.println(volumeBallFloat(6371.1F));
         System.out.println(calculateAccuracy(6371.1));
+
     }
 
     public static double volumeBallDouble(double radius){
@@ -21,8 +22,9 @@ public class AccuracyDoubleFloat {
        double a = volumeBallDouble( 6371.1);
        float b = (float) a;
        float c = volumeBallFloat(6371.1F);
-       double d = b / c;
-       return d;
+       double d = a / c;
+      return d;
+
 
    }
 }

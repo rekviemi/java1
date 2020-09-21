@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 
 public class TriangleSimpleInfo {
     public static void main(String[] args) {
-        System.out.println(maxSide(13, 14, 14));
+        System.out.println(maxSide(3, 4, 5));
         System.out.println(minSide(9, 10, 9));
         System.out.println(isEquilateralTriangle(1, 2, 3));
     }
@@ -13,7 +13,7 @@ public class TriangleSimpleInfo {
             max = a;
         } else if (b >= a && b >= c) {
             max = b;
-        } else if  (c <= b && c <= a){
+        } else if  (c >= b && c >= a){
             max = c;
         } else {
             max = 0;

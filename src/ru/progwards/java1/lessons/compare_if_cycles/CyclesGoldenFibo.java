@@ -4,11 +4,11 @@ public class CyclesGoldenFibo {
 
     public static void main(String[] args) {
         System.out.println(fiboNumber(9));
-        System.out.println(containsDigit(1, 0));
+        System.out.println(containsDigit(12345, 1));
     }
 
      public static boolean containsDigit(int number, int digit){
-         boolean is = number % 1  == digit & number  <= digit % 1;
+         boolean is = number % 1  == digit || number  >= digit ;
          return is;
      }
     public static int fiboNumber(int n) {

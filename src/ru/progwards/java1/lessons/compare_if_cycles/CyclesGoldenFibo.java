@@ -8,7 +8,7 @@ public class CyclesGoldenFibo {
     }
 
      public static boolean containsDigit(int number, int digit){
-         boolean is = number % 1 <= digit;
+         boolean is = number % 1  == digit;
          return is;
      }
     public static int fiboNumber(int n) {

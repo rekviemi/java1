@@ -1,6 +1,9 @@
 package ru.rekvi.sas;
 
 public class Test {
+    public static void main(String[] args) {
+
+    }
 
 //
 //    public static double volumeBallDouble(double radius){

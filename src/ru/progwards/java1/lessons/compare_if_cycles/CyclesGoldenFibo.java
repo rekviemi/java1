@@ -4,19 +4,19 @@ public class CyclesGoldenFibo {
 
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
-        System.out.println(containsDigit(12345, 1));//0 фолс 1 тру
+        System.out.println(containsDigit(0, 0));//0 фолс 1 тру === нули тру
        // System.out.println(isGoldenTriangle(34, 55,55));
     }
 
      public static boolean containsDigit(int number, int digit) {
-//      boolean is = number  == digit | number % 1 == digit ;
-//      return is;
+      boolean is = number  == digit  ;
+
          while (number > 0) {
              if (number % 10 == digit)
                  return true;
              number = number / 10;
          }
-         return false;
+         return is;
      }
 
 

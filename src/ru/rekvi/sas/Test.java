@@ -2,9 +2,20 @@ package ru.rekvi.sas;
 
 public class Test {
     public static void main(String[] args) {
-
+        System.out.println(fiboNumber(10));
     }
+    public static int fiboNumber(int n) {
+        if (n == 1 || n == 2) {
+            return 1;
+        } for (int i=3; i <= n; i ++){
+            n = (n-1) + (n-2);
+        }
+        System.out.println(n);
+        return n;
 
+
+        }
+    }
 //
 //    public static double volumeBallDouble(double radius){
 //        double v = 4/3.03.14(radiusradiusradius);
@@ -24,4 +35,3 @@ public class Test {
 //        System.out.println(volumeBallDouble (6371.2) - volumeBallFloat(6371.2f));
 //
 //    }
-}

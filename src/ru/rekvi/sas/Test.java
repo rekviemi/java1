@@ -1,21 +1,35 @@
 package ru.rekvi.sas;
 
-public class Test {
-    public static void main(String[] args) {
-        System.out.println(fiboNumber(10));
+class Person{
+    private String name;
+    private int age;
+    private String country;
+
+    public Person(){
+        country = "RU";
     }
-    public static int fiboNumber(int n) {
-        if (n == 1 || n == 2) {
-            return 1;
-        } for (int i=3; i <= n; i ++){
-            n = (n-1) + (n-2);
-        }
-        System.out.println(n);
-        return n;
+
+    public Person(String name, int age){
+        this();
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public  int getAge(){
+        return age;
+    }
+    public String getCountry(){
+        return country;
+    }
+}
 
 
-        }
-    }
+
+
+
 //
 //    public static double volumeBallDouble(double radius){
 //        double v = 4/3.03.14(radiusradiusradius);

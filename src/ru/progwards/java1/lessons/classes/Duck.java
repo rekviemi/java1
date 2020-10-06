@@ -6,7 +6,7 @@ class Duck extends Animal {
     }
     @Override
     public double getFoodCoeff(){
-        return weight / 0.04;
+        return weight % 0.04;
     }
     @Override
     public AnimalKind getKind() {

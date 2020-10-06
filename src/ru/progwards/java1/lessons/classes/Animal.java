@@ -37,24 +37,28 @@ public class Animal {
     public FoodKind getFoodKind() {
         return food1;
     }
-
-    public String toString() {
-        return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight();
-    }
-
     public double getWeight() {
         return weight;
     }
 
     public double getFoodCoeff() {
-        return weight * 0.02;
+        return weight % 0.02;
     }
 
     public double calculateFoodWeight() {
         return getFoodCoeff() * getWeight();
     }
 
+    public String toString() {
+        return "I am " + getKind() + ", eat " + getFoodKind();
+    }
+    public String toStringFull(){
+        return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight();
+    }
+
+
     public static void main(String[] args) {
         System.out.println(new Animal(0).toString());
+        System.out.println(new Animal(200).toStringFull());
     }
 }

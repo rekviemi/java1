@@ -6,7 +6,7 @@ class Hamster extends Animal {
     }
     @Override
     public double getFoodCoeff(){
-        return weight % 0.03;
+        return  0.03;
     }
     @Override
     public AnimalKind getKind() {

@@ -6,7 +6,7 @@ class Cow extends Animal {
     }
     @Override
     public double getFoodCoeff(){
-        return weight % 0.05;
+        return  0.05;
     }
     @Override
     public AnimalKind getKind() {

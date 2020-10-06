@@ -14,7 +14,7 @@ class Hamster extends Animal {
     }
     @Override
     public String toString() {
-        return  getKind() + ", " + getFoodKind();
+        return  super.toString();
     }
     public static void main(String[] args) {
         System.out.println(new Hamster(0).toString());

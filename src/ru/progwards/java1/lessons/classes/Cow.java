@@ -15,7 +15,7 @@ class Cow extends Animal {
     }
     @Override
     public String toString() {
-        return  getKind() + ", " + getFoodKind();
+        return  super.toString();
     }
     public static void main(String[] args) {
         System.out.println(new Cow(0).toString());

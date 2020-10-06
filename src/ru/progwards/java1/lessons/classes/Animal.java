@@ -3,12 +3,14 @@ package ru.progwards.java1.lessons.classes;
 public class Animal {
     double weight;
 
+
     enum AnimalKind {
         ANIMAL,
         COW,
         HAMSTER,
         DUCK,
     }
+
     AnimalKind animal1 = AnimalKind.ANIMAL;
     AnimalKind animal2 = AnimalKind.COW;
     AnimalKind animal3 = AnimalKind.HAMSTER;
@@ -19,11 +21,13 @@ public class Animal {
         HAY,
         CORN,
     }
+
     FoodKind food1 = FoodKind.UNKNOWN;
     FoodKind food2 = FoodKind.HAY;
     FoodKind food3 = FoodKind.CORN;
+
     public Animal(double weight) {
-          this.weight = weight;
+        this.weight = weight;
     }
 
     public AnimalKind getKind() {
@@ -35,7 +39,19 @@ public class Animal {
     }
 
     public String toString() {
-        return "I am " + getKind() + ", eat " + getFoodKind();
+        return "I am " + getKind() + ", eat " + getFoodKind() + "," + calculateFoodWeight();
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getFoodCoeff() {
+        return weight / 0.02;
+    }
+
+    public double calculateFoodWeight() {
+        return getFoodCoeff() * getWeight();
     }
 
     public static void main(String[] args) {

@@ -60,6 +60,6 @@ public class Animal {
 
     public static void main(String[] args) {
         System.out.println(new Animal(0).toString());
-        System.out.println(new Animal(200).toStringFull());
+        System.out.println(new Animal(386).toStringFull());
     }
 }

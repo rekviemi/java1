@@ -23,20 +23,26 @@ public class ComplexNum {
         int b1 = this.b + num.b;
         return num;
     }
-//
-//    public ComplexNum sub(ComplexNum num) {
-//        (a + bi) - (c + di) = (a - c) + (b - d) i
-//    }
-//
-//    public ComplexNum mul(ComplexNum num) {
-//        (a + bi) * (c + di) = (a * c - b * d) + (b * c + a * d) i
-//    }
-//
-//    public ComplexNum div(ComplexNum num) {
-//        (a + bi) / (c + di) = (a * c + b * d) / (c * c + d * d) + ((b * c - a * d) / (c * c + d * d)) i
-//    }
+
+    public ComplexNum sub(ComplexNum num) {
+        int a1 = this.a - num.a;
+        int b1 = this.b - num.b;
+        return num;
+    }
+
+    public ComplexNum mul(ComplexNum num) {
+        int a1 = this.a * num.a;
+        int b1 = this.b * num.b;
+        return num;
+    }
+
+    public ComplexNum div(ComplexNum num) {
+        int a1 = this.a / num.a;
+        int b1 = this.b / num.b;
+        return num;
+    }
 
     public static void main(String[] args) {
-        System.out.println();
+
     }
 }

@@ -11,13 +11,12 @@ public class ComplexNum {
     }
 
     public String toString() {
-        return a+"+"+b+"i";
+        return a + "+" + b + "i";
     }
 
     public ComplexNum add(ComplexNum num) {
         a = this.a + num.a;
         b = this.b + num.b;
-
         return new ComplexNum(a, b);
     }
 
@@ -28,22 +27,21 @@ public class ComplexNum {
     }
 
     public ComplexNum mul(ComplexNum num) {
-        a = this.a * num.a % 1;
-        b = this.b * num.b * 2;
+        a = this.a * num.a;
+        b = this.b * num.b;
         return new ComplexNum(a, b);
-
     }
 
     public ComplexNum div(ComplexNum num) {
         a = this.a / num.a;
-        b = this.b / num.b %1;
+        b = this.b / num.b;
         return new ComplexNum(a, b);
     }
 
     public static void main(String[] args) {
-        System.out.println( new ComplexNum(1, 1).add(new ComplexNum(99, 99)).toString());
-        System.out.println( new ComplexNum(1, 1).sub(new ComplexNum(99, 99)).toString());
-        System.out.println( new ComplexNum(1, 1).mul(new ComplexNum(99, 99)).toString());
-        System.out.println( new ComplexNum(1000, 1000).div(new ComplexNum(100, 100)).toString());
+        System.out.println(new ComplexNum(1, 1).add(new ComplexNum(99, 99)).toString());
+        System.out.println(new ComplexNum(1, 1).sub(new ComplexNum(99, 99)).toString());
+        System.out.println(new ComplexNum(1, 2).mul(new ComplexNum(99, 98)).toString());
+        System.out.println(new ComplexNum(1000, 1000).div(new ComplexNum(100, 100)).toString());
     }
 }

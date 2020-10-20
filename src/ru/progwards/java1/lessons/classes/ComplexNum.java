@@ -26,16 +26,24 @@ public class ComplexNum {
         return new ComplexNum(a, b);
     }
 
-    public ComplexNum mul(ComplexNum num) {
+    public ComplexNum mul(ComplexNum num) { //-97+296i
         a = this.a * num.a;
         b = this.b * num.b;
         return new ComplexNum(a, b);
+//        int AnsI = (this.a * num.b) + (this.b * num.a);
+//        int AnsR = (this.a * num.a) - (this.b * num.b);
+//        ComplexNum Sum = new ComplexNum(AnsR, AnsI);
+//        return Sum;
     }
 
     public ComplexNum div(ComplexNum num) {
-        a = this.a / num.a;
-        b = this.b / num.b;
-        return new ComplexNum(a, b);
+//        a = this.a / num.a;
+//        b = this.b / num.b;
+//        return new ComplexNum(a, b);
+        ComplexNum ComCon = new ComplexNum(num.a, (num.b * -1));
+        ComplexNum part1 = new ComplexNum(this.a, this.b).mul(ComCon);
+        ComplexNum part2 = num.mul(ComCon);
+        return part1;
     }
 
     public static void main(String[] args) {

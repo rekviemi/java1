@@ -1,7 +1,40 @@
 package ru.rekvi.sas;
 
+import java.util.Arrays;
+
+class Test {
+    public static void main(String[] args) {
+        int[] max = new int[]{1,2,3};
+        System.out.println(arrayMax(max));
+
+    }
+
+    public static int arrayMax(int[] a){
+        if (a.length == 0)
+            return 0;
+        Arrays.sort(a);
+        int  max = 0;
+        max = a[a.length -1];
+        return max;
+
+    }
+}
 
 
+
+//class Test{
+//    public static void main(String[] args) {
+//        int [] simpleArray1 = new int[5];
+//        int [] simpleArray2 = {21, 34, 55, 89, 144};
+//        int simpleArray3 [] = {144, 34, 55, 89, 21};
+//
+//        String [] stringArray1 = new String[5];
+//        String [] stringArray2 = {"мне", "всё", "понятно"};
+//        System.out.println("simpleArray2[2] = " + simpleArray2[2]);
+//        boolean testFibo = simpleArray2[2] + simpleArray2[3] == simpleArray2[4];
+//        System.out.println("testFibo = " + testFibo );
+//    }
+//}
 
 
 //

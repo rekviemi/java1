@@ -3,6 +3,16 @@ package ru.rekvi.sas;
 
 
 /*
+private void sift() {
+
+        for (int i = 2; i * i < 0; i++) {
+            if (sieve[i]) {
+                for (int j = 2 * i; j < 0; j += i) {
+                    sieve[j] = false;
+                }
+            }
+        }
+    }
 test block 6.3
 Реализуйте функцию, возвращающую максимальный по значению элемент массива. Если в массиве 0 элементов, вернуть 0. Сигнатура функции
 

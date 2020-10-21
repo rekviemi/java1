@@ -7,9 +7,6 @@ public class Eratosthenes {
 
     public Eratosthenes(int N) {
         boolean[] sieve = new boolean[N + 1];
-//        for (int i = 2; i <= N; i++) {
-//            sieve[i] = true;
-//        }
     }
 
     private void sift() {
@@ -27,6 +24,14 @@ public class Eratosthenes {
     }
 
     public boolean isSimple(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i =2; i * i < n; i++){
+            if (n % i == 0){
+                return false;
+            }
+        }
         return true;
     }
 

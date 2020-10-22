@@ -1,18 +1,27 @@
 package ru.progwards.java1.lessons.arrays;
 
+import java.util.Arrays;
+
 public class ArraySort {
-    public static int sort(int[] a){
-       if (a[1] > a[2]) {
-           return a[2] = a[1];
-       }
-        return 0;
+    int arr;
+
+    public static void sort(int[] a){
+        int arr;
+        for (int f = 0; f < a.length; f++){
+            for (int i = f + 1; i < a.length; i++){
+                if (a [f] > a [i]){
+                    arr = a [f];
+                    a [f] = a [i];
+                    a [i] = arr;
+                }
+            }
+        }
     }
 
-
-
     public static void main(String[] args) {
-        int[] a = {5, 4, 6, 8, 1};
-
+        int [] a = {2,4,3,6,5,7,5,8,1,0};
+        sort(a);
+        System.out.println(Arrays.toString(a));
     }
 }
 

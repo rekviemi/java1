@@ -3,15 +3,23 @@ package ru.rekvi.sas;
 
 
 /*
-private void sift() {
-
-        for (int i = 2; i * i < 0; i++) {
-            if (sieve[i]) {
-                for (int j = 2 * i; j < 0; j += i) {
-                    sieve[j] = false;
-                }
+/////////////////////////////////////////
+public static boolean isSimple(int n) {
+        if (n < 2) {
+            return false;
+        }
+        if (n % 2 == 0) {
+            return n == 2;
+        }
+        if (n % 3 == 0) {
+            return n == 3;
+        }
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return false;
             }
         }
+        return true;
     }
 test block 6.3
 Реализуйте функцию, возвращающую максимальный по значению элемент массива. Если в массиве 0 элементов, вернуть 0. Сигнатура функции

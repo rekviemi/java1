@@ -12,13 +12,13 @@ public class Eratosthenes {
     }
 
     private void sift() {
-        for (int i = 2; i <= N - 1; i++) {
-            if (sieve[i]) {
-                for (int j = 2 * i; j <= N; j += i) {
-                    sieve[j] = false;
-                }
-            }
-        }
+//        for (int i = 2; i <= N - 1; i++) {
+//            if (sieve[i]) {
+//                for (int j = 2 * i; j <= N; j += i) {
+//                    sieve[j] = false;
+//                }
+//            }
+//        }
     }
 
 

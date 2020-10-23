@@ -3,24 +3,53 @@ package ru.rekvi.sas;
 import java.util.Arrays;
 
 class Test {
+
+
     public static void main(String[] args) {
-        int[] max = new int[]{1,2,3};
-        System.out.println(arrayMax(max));
+        int length = args.length;
+        for (int i = 2; i < 10; i = i + 2) {
+            System.out.println("чётные" + " " + i);
+        }
+        for (int j = 1; j < 10; j = j + 2) {
+            System.out.println("а так нечётные" + " " + j);
+        }
+        for (int w = 1; w < args.length; w++) {
+            System.out.println(w);
+        }
+        for (int q = 5; q > 0; q--) {
+            System.out.println(q);
+        }
+        int[][] array = {{0, 1, 2, 3, 4},
+                {1, 2, 3, 4, 5},
+                {2, 3, 4, 5, 6},
+                {3, 4, 5, 6, 7}};
 
-    }
-
-    public static int arrayMax(int[] a){
-        if (a.length == 0)
-            return 0;
-        Arrays.sort(a);
-        int  max = 0;
-        max = a[a.length -1];
-        return max;
-
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.print('\n');
+        }
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(" & " + " ");
+            }
+            System.out.println(" & ");
+        }
     }
 }
 
 
+//class Test {
+//    public static double addTenPercent(int i) {
+//        double a = (i * 0.10);
+//        return a + i;
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println(addTenPercent(9));
+//    }
+//}
 
 //class Test{
 //    public static void main(String[] args) {

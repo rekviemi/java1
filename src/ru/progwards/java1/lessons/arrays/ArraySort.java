@@ -19,7 +19,7 @@ public class ArraySort {
     }
 
     public static void main(String[] args) {
-        int [] a = {133, 1, -1, 33, 2, -2147234422};
+        int [] a = {133, 1, 1, 33, 2, 2147483647, -2147483647};
         sort(a);
         System.out.println(Arrays.toString(a));
     }

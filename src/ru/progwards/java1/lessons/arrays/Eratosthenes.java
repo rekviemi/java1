@@ -21,11 +21,11 @@ public class Eratosthenes {
         }
     }
 
-    public boolean isSimple(int n){
-        return sieve [n];
+    public boolean isSimple(int n) {
+        return sieve[n];
     }
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
         Eratosthenes N = new Eratosthenes(100);
         System.out.println(N.isSimple(11));
     }

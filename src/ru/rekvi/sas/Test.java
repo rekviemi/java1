@@ -1,43 +1,31 @@
 package ru.rekvi.sas;
 
-import java.util.Arrays;
+public class Test {
 
-class Test {
 
 
     public static void main(String[] args) {
-        int length = args.length;
-        for (int i = 2; i < 10; i = i + 2) {
-            System.out.println("чётные" + " " + i);
-        }
-        for (int j = 1; j < 10; j = j + 2) {
-            System.out.println("а так нечётные" + " " + j);
-        }
-        for (int w = 1; w < args.length; w++) {
-            System.out.println(w);
-        }
-        for (int q = 5; q > 0; q--) {
-            System.out.println(q);
-        }
-        int[][] array = {{0, 1, 2, 3, 4},
-                {1, 2, 3, 4, 5},
-                {2, 3, 4, 5, 6},
-                {3, 4, 5, 6, 7}};
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.print('\n');
-        }
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                System.out.print(" & " + " ");
-            }
-            System.out.println(" & ");
-        }
     }
+
 }
+
+
+//    public static void main(String[] args) {
+////        int[] arrayInt = {1, 2, 3};
+////        System.out.println(Arrays.toString(arrayInt));
+////        int[] copyArrayInt = new int[arrayInt.length + 1];
+////        System.arraycopy(arrayInt, 0, copyArrayInt, 0, arrayInt.length);
+////        copyArrayInt[arrayInt.length] = 1000000;
+////        System.out.println("должен появиться 4 элемент массива с числом 1 миллион" + "\n" + Arrays.toString(copyArrayInt));
+////
+////        String st = "Учимся программировать";
+////        System.out.println(st);
+////        char s[] = st.toCharArray();  // конвертируем строку в массив символов, затем выводим символы на экран в обратном порядке
+////        for (int x = s.length  -1; x >= 0; x--) {
+////            System.out.print(s[x]);
+////        }
+//    }
 
 
 //class Test {

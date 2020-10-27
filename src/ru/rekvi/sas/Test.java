@@ -1,30 +1,34 @@
 package ru.rekvi.sas;
 
-public class Test {
+import java.util.Arrays;
 
-
-
-    public static void main(String[] args) {
-
-    }
+public class Test{
 
 }
 
 
+
+
+
+
+
+
+
+
 //    public static void main(String[] args) {
-////        int[] arrayInt = {1, 2, 3};
-////        System.out.println(Arrays.toString(arrayInt));
-////        int[] copyArrayInt = new int[arrayInt.length + 1];
-////        System.arraycopy(arrayInt, 0, copyArrayInt, 0, arrayInt.length);
-////        copyArrayInt[arrayInt.length] = 1000000;
-////        System.out.println("должен появиться 4 элемент массива с числом 1 миллион" + "\n" + Arrays.toString(copyArrayInt));
-////
-////        String st = "Учимся программировать";
-////        System.out.println(st);
-////        char s[] = st.toCharArray();  // конвертируем строку в массив символов, затем выводим символы на экран в обратном порядке
-////        for (int x = s.length  -1; x >= 0; x--) {
-////            System.out.print(s[x]);
-////        }
+//        int[] arrayInt = {1, 2, 3};
+//        System.out.println(Arrays.toString(arrayInt));
+//        int[] copyArrayInt = new int[arrayInt.length + 1];
+//        System.arraycopy(arrayInt, 0, copyArrayInt, 0, arrayInt.length);
+//        copyArrayInt[arrayInt.length] = 1000000;
+//        System.out.println("должен появиться 4 элемент массива с числом 1 миллион" + "\n" + Arrays.toString(copyArrayInt));
+//
+//        String st = "Учимся программировать";
+//        System.out.println(st);
+//        char s[] = st.toCharArray();  // конвертируем строку в массив символов, затем выводим символы на экран в обратном порядке
+//        for (int x = s.length - 1; x >= 0; x--) {
+//            System.out.print(s[x]);
+//        }
 //    }
 
 

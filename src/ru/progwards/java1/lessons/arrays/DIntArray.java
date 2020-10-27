@@ -24,6 +24,7 @@ public class DIntArray {
     private int[] arrayInt;
 
     public DIntArray() {
+
         arrayInt = new int[0];
     }
 

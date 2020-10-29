@@ -1,16 +1,27 @@
 package ru.progwards.java1.lessons.bitsworld;
 
 public class SumBits {
-    public static int sumBits(byte value){
-        byte sum =  0;
+    public static int sumBits(byte value) {
+/* тесты разных вариантов
         for(byte b = 1; b != 0; b >>= 1) {
             if ((value & b)  != 0) sum++;
         }
-       return sum;
+        while (value > 0) {
+            sum += value & 1;
+            value >>= 1;
+        }
+*/
+        byte sum = 0;
+        while (value > 0) {
+           sum += value & 1;
+            value >>= 1;
+
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-        System.out.println(sumBits((byte) 0100101));
+        System.out.println(sumBits((byte) 0b0100101));
     }
 }
 /*

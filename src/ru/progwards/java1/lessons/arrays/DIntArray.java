@@ -68,8 +68,8 @@ public class DIntArray {
         arr.add(8);
         arr.add(9);
         System.out.println(Arrays.toString(arr.arrayInt));
-        System.out.println(arr.at(4));
-        arr.atInsert(0, 150000);
+        System.out.println(arr.at(1));
+        arr.atInsert(3, 150000);
         System.out.println(Arrays.toString(arr.arrayInt));
         arr.atDelete(10);
         System.out.println(Arrays.toString(arr.arrayInt));

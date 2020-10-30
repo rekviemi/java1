@@ -4,12 +4,14 @@ public class CheckBit {
 
     public static int checkBit(byte value, int bitNumber) {
 
-        return ((value >> (bitNumber -1)) | 0);
+      // return ((value >> (bitNumber -1)) & 1);
+       // return (byte) (value >> (bitNumber - 1));
+        return (value >> bitNumber) & 1;
     }
 
     public static void main(String[] args) {
-        System.out.println(checkBit((byte) 84, 0));//0
-       // System.out.println(checkBit((byte) 0b001_0000, 4));
+        System.out.println(checkBit((byte) 84, 0));// 84-0 = 0 ___ 85-0 = 1
+        System.out.println(checkBit((byte) 85, 4));
     }
 }
 /* for me

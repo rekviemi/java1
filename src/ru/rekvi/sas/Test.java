@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Test{
     public static void main(String[] args) {
-        int i = 128;
+        int i = 5;
         //число 128 в двоичной системе
         System.out.println(Integer.toBinaryString(i));
         //обратыный перевод из двоичной системы в десятичную

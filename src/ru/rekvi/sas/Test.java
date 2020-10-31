@@ -1,10 +1,30 @@
 package ru.rekvi.sas;
 
 import java.util.Arrays;
+public class Test {
 
-public class Test{
     public static void main(String[] args) {
-        int i = 85;
+        int num2=2;
+        int num3=3;
+        int num4=4;
+        int num1=1;
+        int nirbinary = (num1 << 24) | (num2 << 16) | (num3 << 8) | num4;
+        System.out.println(nirbinary);
+        String nir=  Integer.toBinaryString(nirbinary);
+        System.out.println(nir);
+    }
+}
+
+
+
+
+
+
+
+/*
+
+    public static void main(String[] args) {
+        int i = 128;
         //число 128 в двоичной системе
         System.out.println(Integer.toBinaryString(i));
         //обратыный перевод из двоичной системы в десятичную
@@ -15,7 +35,7 @@ public class Test{
         System.out.println(Integer.toHexString(i));
     }
 }
-/*
+
 
 
     byte i = 127;

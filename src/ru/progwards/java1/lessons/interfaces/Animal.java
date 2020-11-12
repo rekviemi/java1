@@ -5,15 +5,7 @@ import java.util.Objects;
 public class Animal implements FoodCompare {
     double weight;
 
-    @Override
-    public int compareFoodPrice() {
-        return 0;
-    }
 
-    @Override
-    public int compareFoodPrice(Animal animal) {
-        return 0;
-    }
 
     enum AnimalKind {
         ANIMAL,
@@ -100,11 +92,15 @@ public class Animal implements FoodCompare {
         }
         return 0;
     }
-
     public double getFoodPrice(){
         return calculateFoodWeight() * getFood1kgPrice();
     }
 
+
+    @Override
+    public int compareFoodPrice(Animal aminal) {
+        return Double.compare(getFoodPrice(), aminal.getFoodPrice());
+    }
 
     public static void main(String[] args) {
         System.out.println(new Animal(0).toString());
@@ -112,6 +108,8 @@ public class Animal implements FoodCompare {
         System.out.println(new Animal(10).equals(new Animal(11)));//false - objects are not equal
         System.out.println(new Cow(33).equals(new Cow(33)));//true - objects are equal
         System.out.println(new Cow(33).equals(new Duck(33)));//false - these objects are different and they are not equal
+        System.out.println(new Cow(2D).getFoodPrice());
+        System.out.println(new Animal(1D).compareFoodPrice(new Cow(1D)));
 
     }
 }

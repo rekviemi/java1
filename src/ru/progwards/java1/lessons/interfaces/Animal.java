@@ -73,17 +73,7 @@ public class Animal implements FoodCompare {
                 food2 == animal.food2 &&
                 food3 == animal.food3;
     }
-/** первая попытка
-    public boolean equals(Object anObject){
-        Object a = this.weight;
-        Object b = this.weight;
-        if(a.equals(b)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-*/
+
     public double getFood1kgPrice(){
         switch (getFoodKind()){
             case HAY: return 20;
@@ -117,23 +107,8 @@ public class Animal implements FoodCompare {
 1.1 Для класса Animal из задач 1 и 2, домашнего задания к уроку 5 реализовать метод:
 public boolean equals(Object anObject), который возвращает true, если объекты равны и false если не равны по параметру
  - вес животного. Убедится, что при равном весе, утка все равно не равна хомяку. Обратите внимание на тип принимаемого
- параметра и подумайте над тем, что будет делать ваша программа, если в качестве параметра будет передан объект не являющийся экземпляром Animal.
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
- public boolean equals(Object other){
- if (other == this){
- return true;
- } else if (other instanceof FractionInterface) {
- FractionInterface fOther = (FractionInterface) other;
- // compare numerator and denominator...
- } else {
- return false;
- }
- }
-
-
-
- //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+ параметра и подумайте над тем, что будет делать ваша программа,
+ если в качестве параметра будет передан объект не являющийся экземпляром Animal.
 
         Для класса Animal реализовать интерфейс FoodCompare, который сравнивает животных по цене потребляемой еды.
 public interface FoodCompare {
@@ -158,5 +133,6 @@ interface FoodCompare {
 }
 
 1.5 В класс Animal реализовать
-public int compareFoodPrice(Animal aminal), который возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
+public int compareFoodPrice(Animal aminal), который возвращает результаты сравнения цены еды для данного животного
+ с ценой еды для другого животного, используя Double.compare;
 */

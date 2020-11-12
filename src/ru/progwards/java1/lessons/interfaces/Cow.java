@@ -1,6 +1,6 @@
-package ru.progwards.java1.lessons.classes;
+package ru.progwards.java1.lessons.interfaces;
 
-public class Cow extends Animal {
+class Cow extends Animal {
     public Cow(double weight) {
         super(weight);
     }
@@ -22,6 +22,5 @@ public class Cow extends Animal {
     }
     public static void main(String[] args) {
         System.out.println(new Cow(0).toString());
-
     }
 }

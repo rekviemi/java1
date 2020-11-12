@@ -1,18 +1,8 @@
 package ru.rekvi.sas;
-
+//89966200664
 import java.util.Arrays;
 public class Test {
 
-    public static void main(String[] args) {
-        int num2=2;
-        int num3=3;
-        int num4=4;
-        int num1=1;
-        int nirbinary = (num1 << 24) | (num2 << 16) | (num3 << 8) | num4;
-        System.out.println(nirbinary);
-        String nir=  Integer.toBinaryString(nirbinary);
-        System.out.println(nir);
-    }
 }
 
 
@@ -21,9 +11,30 @@ public class Test {
 
 
 
-/*
-
-    public static void main(String[] args) {
+/**
+ ************************************* change the color of the text in the console *************************************
+ * public class Test {
+ *     static final String RESET = "\u001b[0m";
+ *     static final String BLACK = "\u001b[30m";
+ *     static final String RED = "\u001b[31m";
+ *     static final String GREEN = "\u001b[32m";
+ *
+ *     public static void print(String color){
+ *         for(int i = 0; i < 30; i++){
+ *             System.out.print(color + "\u1F46");
+ *         }
+ *         System.out.println();
+ *     }
+ *
+ *     public static void main(String[] args) {
+ *         print(RESET);
+ *         print(RED);
+ *         print(GREEN);
+ *
+ *     }
+ * }
+ ***********************************************************************************************************************
+        public static void main(String[] args) {
         int i = 128;
         //число 128 в двоичной системе
         System.out.println(Integer.toBinaryString(i));

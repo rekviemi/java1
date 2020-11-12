@@ -8,29 +8,31 @@ private byte num;
     }
 
     public String toString() {
-//первое решение которое нашёл без циклов
-//        String result = "";
-//        result += (num >> 7) & 0b00000001;
-//        result += (num >> 6) & 0b00000001;
-//        result += (num >> 5) & 0b00000001;
-//        result += (num >> 4) & 0b00000001;
-//        result += (num >> 3) & 0b00000001;
-//        result += (num >> 2) & 0b00000001;
-//        result += (num >> 1) & 0b00000001;
-//        result += (num >> 0) & 0b00000001;
-//        return result;
-
+//первое решение которое нашёл, взяв за основу первый урок из дз
+/*
+        String result = "";
+        result += (num >> 7) & 0b00000001;
+        result += (num >> 6) & 0b00000001;
+        result += (num >> 5) & 0b00000001;
+        result += (num >> 4) & 0b00000001;
+        result += (num >> 3) & 0b00000001;
+        result += (num >> 2) & 0b00000001;
+        result += (num >> 1) & 0b00000001;
+        result += (num >> 0) & 0b00000001;
+        return result;
+*/
+ //гугл помог найти отчет, но шёл в верном направлении
         String result = "";
         for (int i = 0; i < 8; i++){
             result = (num & 0b1) + result;
-            num >>>= 1;
+            num >>= 1;
         }
         return result;
     }
 
 
     public static void main(String[] args) {
-        Binary bin = new Binary((byte) -128);
+        Binary bin = new Binary((byte) 127);
         System.out.println(bin);
     }
 }

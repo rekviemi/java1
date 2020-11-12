@@ -2,12 +2,40 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class SumBits {
     public static int sumBits(byte value) {
+ // эту функцию написал сам, на основе ниже стоящего метода
         int sum = 0;
         for (int i = 0; i < 8; i++)
         {
             sum += (value >> i) & 1;
         }
         return sum;
+/*  этот метод написал благодаря подсказке Oleg79, решение довольно простое, но слишком длинное
+        int result = 0;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        value >>= 1;
+        if ((value & 1) == 1)
+            result++;
+        return result;
+ */
     }
 
 

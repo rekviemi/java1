@@ -13,13 +13,19 @@ public class CalculateFibonacci {
             sum2 = sum;
         }
         return sum;
-       // if(n == n)
+
     }
     public static class CacheInfo{
         public int n;
         public int fibo;
     }
     public static CacheInfo getLastFibo(){
+        CacheInfo cacheinfo = new CacheInfo();
+        if (cacheinfo != null)
+        {
+            cacheinfo.n = lastFibo.n;
+            cacheinfo.fibo = lastFibo.fibo;
+        }
         return lastFibo;
     }
     public static void clearLastFibo(){
@@ -27,6 +33,6 @@ public class CalculateFibonacci {
     }
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
-        clearLastFibo();
+
     }
 }

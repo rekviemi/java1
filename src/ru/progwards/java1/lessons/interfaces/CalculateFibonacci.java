@@ -4,6 +4,9 @@ public class CalculateFibonacci {
     private static CacheInfo lastFibo;
 
     public static int fiboNumber(int n){
+        if (CalculateFibonacci.lastFibo !=null)
+            if (n == CalculateFibonacci.lastFibo.n)
+                return CalculateFibonacci.lastFibo.fibo;
         int sum = 1;
         int sum1 = 0;
         int sum2 = 1;
@@ -20,19 +23,21 @@ public class CalculateFibonacci {
         public int fibo;
     }
     public static CacheInfo getLastFibo(){
-        CacheInfo cacheinfo = new CacheInfo();
-        if (cacheinfo != null)
-        {
-            cacheinfo.n = lastFibo.n;
-            cacheinfo.fibo = lastFibo.fibo;
-        }
-        return lastFibo;
+//        CacheInfo cacheinfo = new CacheInfo();
+//            cacheinfo.n = lastFibo.n;
+//            cacheinfo.fibo = lastFibo.fibo;
+//        return lastFibo;
+        return CalculateFibonacci.lastFibo;
+
     }
-    public static void clearLastFibo(){
+    public static Object clearLastFibo(){
         lastFibo = null;
+        return null;
     }
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
-
+//        CalculateFibonacci calculateFibonacci = new CalculateFibonacci();
+//        System.out.println(calculateFibonacci.getLastFibo());
+//        System.out.println(calculateFibonacci.clearLastFibo());
     }
 }

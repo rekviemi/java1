@@ -23,11 +23,8 @@ public class CalculateFibonacci {
         public int fibo;
     }
     public static CacheInfo getLastFibo(){
-//        CacheInfo cacheinfo = new CacheInfo();
-//            cacheinfo.n = lastFibo.n;
-//            cacheinfo.fibo = lastFibo.fibo;
-//        return lastFibo;
-        return CalculateFibonacci.lastFibo;
+       return lastFibo;
+
 
     }
     public static Object clearLastFibo(){

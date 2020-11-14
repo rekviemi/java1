@@ -2,7 +2,175 @@ package ru.rekvi.sas;
 
 
 
-/*
+/**
+ * ========================================== test block 8.3 ===========================================================
+ * Создайте класс Person, а внутри него 2 класса
+ * вложенный класс Child1
+ * внутренний класс Child2
+ * У каждого класса, Child1 и Child2 создайте метод String hello()
+ * У Child1 String hello() должен вернуть "привет"
+ * У Child2 String hello() должен вернуть "servus"
+ *
+ public class Person {
+ public static class Child1 { //nested
+        String hello(){
+        return "привет";
+     }
+ }
+
+ public class Child2 { //inner
+ String hello(){
+ return  "servus";
+     }
+ }
+
+ public static void main(String[] args) {
+ System.out.println(new Person.Child1().hello());
+ System.out.println(new Person().new Child2().hello());
+       }
+ }
+*=========================================== test block 8.2 ============================================================
+Описаны интерфейсы
+public interface Speaking {
+    public String say();
+ }
+
+public interface Eating {
+     public String eat();
+ }
+
+реализовать 2 класса, Dog и Goat.
+У класса Dog метод say() должен вернуть "Гав"
+У класса Dog метод eat() должен вернуть "Мясо"
+У класса Goat метод say() должен вернуть "Мее"
+У класса Goat метод eat() должен вернуть "Сено"
+
+ public class Dog implements Speaking, Eating{
+    @Override
+    public String say(){
+        return new String("Гав");
+    }
+    @Override
+    public String eat(){
+        return new String("Мясо");
+    }
+}
+
+public class Goat implements Eating, Speaking {
+    @Override
+    public String say(){
+        return new String("Мее");
+    }
+
+    @Override
+    public String eat(){
+        return new String("Сено");
+    }
+}
+
+
+
+test block 8.1
+package ru.rekvi.sas;
+
+import java.util.Objects;
+
+public class Rectangle {
+    private double a;
+    private double b;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        if (area() > rectangle.area())
+            return false;
+        else if (area() < rectangle.area())
+            return false;
+        else
+            return true;
+       // return Double.compare(rectangle.a, a) == 0 && Double.compare(rectangle.b, b) == 0; выдала среда по умолчанию
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a, b);
+    }
+
+    public Rectangle(double a, double b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public double area() {
+        return a*b;
+    }
+
+    public static void main(String[] args) {
+        boolean a = new Rectangle(2,3).equals(new Rectangle(3, 2));
+        System.out.println("true = " + a);
+        boolean b = new Rectangle(3,3).equals(new Rectangle(2, 2));
+        System.out.println("false = " + b);
+        boolean c = new Rectangle(3,4).equals(new Rectangle(6, 2));
+        System.out.println("true = " + c);
+        new Rectangle(2,3).equals(new Rectangle(3, 2));
+        new Rectangle(3,3).equals(new Rectangle(2, 2));
+        new Rectangle(3,4).equals(new Rectangle(6, 2));
+        new Rectangle(2,2).equals(new Rectangle(2, 2));
+        Rectangle rect;
+        boolean d = (rect=new Rectangle(1,2)).equals(rect);
+        System.out.println("true = " + d);
+        boolean e = new Rectangle(2,2).equals(null);
+        System.out.println("" + e);
+        new Rectangle(2,2).equals(new Object());
+    }
+}
+
+test block 7.3
+Создайте метод, возвращающий значение enum Grade по числовой оценке.
+Сигнатура метода static Grade intToGrade(int grade)
+Соответствие оценок
+1 - VERYBAD
+2 - BAD
+3 - SATISFACTORILY
+4 - GOOD
+5 - EXCELLENT
+все остальное NOTDEFINED
+Например, intToGrade(4) должно вернуть GOOD
+
+public class Grader {
+    enum Grade {
+        VERYBAD,
+        BAD,
+        EXCELLENT,
+        GOOD,
+        NOTDEFINED,
+        SATISFACTORILY,
+    }
+    static Grade intToGrade(int grade){
+            switch (grade){
+                case 1: return Grade.VERYBAD;
+                case 2: return Grade.BAD;
+                case 3: return Grade.SATISFACTORILY;
+                case 4: return Grade.GOOD;
+                case 5: return Grade.EXCELLENT;
+                default: return Grade.NOTDEFINED;
+            }
+        }
+    public static void main(String[] args) {
+        System.out.println(intToGrade(55));
+    }
+}
+
+
+
+test block 7.2
+Написать программный код, который возвращает младший (нулевой) бит переменной byte value. Ответ нужно поместить в переменную int result.
+Таким образом, если младший бит параметра value равен 0, то result должен быть равен 0. Если младший бит равен 1, то и result должен быть равен 1.
+Подсказка
+при реализации этой функции удобно использовать битовую операцию &
+int result = value & 0b01;
 /////////////////////////////////////////
 public static boolean isSimple(int n) {
         if (n < 2) {
@@ -120,6 +288,7 @@ class Point2D {
     }
     public static void main(String[] args) {
         System.out.println(new Point2D(22, 38).toString());
+        System.out.println(new Point3D(1, 2, 3).toString());
     }
 }
 class Point3D extends Point2D {
@@ -262,7 +431,7 @@ public class HelloWorld {
         else
             score = "не определено";
         return score;
-
+Rekvi1zaq
     }
 }
 

@@ -17,8 +17,10 @@ public class CalculateFibonacci {
 //            sum2 = sum;
 //        }
 //        return sum;
+
         lastFibo = new CacheInfo();
-        if (lastFibo.n == n) return lastFibo.fibo;
+        if (lastFibo.n == n)
+            return lastFibo.fibo;
 
         int a = 1;
         int b = 0;

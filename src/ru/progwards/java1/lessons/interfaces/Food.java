@@ -1,10 +1,10 @@
 package ru.progwards.java1.lessons.interfaces;
 
-public class Food {
+public class Food implements CompareWeight{
     private int weight;
 
     public Food(int weight) {
-        this.weight = weight;
+        this.weight = weight % 100;
     }
     public int getWeight(){
         return weight;

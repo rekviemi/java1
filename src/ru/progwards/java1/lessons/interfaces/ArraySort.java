@@ -1,23 +1,8 @@
 package ru.progwards.java1.lessons.interfaces;
+
 import java.util.Arrays;
 
-public interface CompareWeight {
-    public enum CompareResult{
-            LESS,
-            EQUAL,
-            GREATER;
-    }
-    public CompareResult compareWeight(CompareWeight smthHasWeigt);
-
-    public static void sort(int[] a){
-
-    }
-
-
-}
-/**
 public class ArraySort {
-
     public static void sort(int[] a) {
         int arr;
         for (int i = 0; i < a.length; i++) {
@@ -37,4 +22,3 @@ public class ArraySort {
         System.out.println(Arrays.toString(a));
     }
 }
- **/

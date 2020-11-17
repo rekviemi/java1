@@ -9,9 +9,9 @@ public interface CompareWeight {
     }
     public CompareResult compareWeight(CompareWeight smthHasWeigt);
 
-    public static void sort(int[] a){
-
-    }
+//    public static void sort(int[] a){
+//
+//    }
 
 
 }

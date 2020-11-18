@@ -65,14 +65,11 @@ public class Animal implements FoodCompare, CompareWeight {
         if (this == anObject) return true;
         if (anObject == null || getClass() != anObject.getClass()) return false;
         Animal animal = (Animal) anObject;
-        return Double.compare(animal.weight, weight) == 0 &&
-                animal1 == animal.animal1 &&
-                animal2 == animal.animal2 &&
-                animal3 == animal.animal3 &&
-                animal4 == animal.animal4 &&
-                food1 == animal.food1 &&
-                food2 == animal.food2 &&
-                food3 == animal.food3;
+        return Double.compare(animal.weight, weight) == 0;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight);
     }
 
     public double getFood1kgPrice() {
@@ -97,13 +94,13 @@ public class Animal implements FoodCompare, CompareWeight {
         return Double.compare(getFoodPrice(), aminal.getFoodPrice());
     }
 
+    @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-
         if (this.getWeight() < ((Animal) smthHasWeigt).getWeight()) {
-            return CompareWeight.CompareResult.LESS;
+            return CompareResult.LESS;
         } else if (this.getWeight() == ((Animal) smthHasWeigt).getWeight()) {
-            return CompareWeight.CompareResult.EQUAL;
-        } else return CompareWeight.CompareResult.GREATER;
+            return CompareResult.EQUAL;
+        } else return CompareResult.GREATER;
     }
 
 

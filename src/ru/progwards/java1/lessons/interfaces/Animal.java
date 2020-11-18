@@ -1,8 +1,12 @@
 package ru.progwards.java1.lessons.interfaces;
-
+import java.util.Objects;
 
 public class Animal implements FoodCompare, CompareWeight {
     double weight;
+
+    public Animal(double weight) {
+        this.weight = weight;
+    }
 
     enum AnimalKind {
         ANIMAL,
@@ -26,9 +30,7 @@ public class Animal implements FoodCompare, CompareWeight {
     FoodKind food2 = FoodKind.HAY;
     FoodKind food3 = FoodKind.CORN;
 
-    public Animal(double weight) {
-        this.weight = weight;
-    }
+
 
     public AnimalKind getKind() {
         return animal1;

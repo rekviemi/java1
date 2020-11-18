@@ -2,7 +2,12 @@ package ru.progwards.java1.lessons.interfaces;
 
 import java.util.Arrays;
 
-public class ArraySort {
+public class ArraySort implements CompareWeight {
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        return null;
+    }
+
     public static void sort(int[] a) {
         int arr;
         for (int i = 0; i < a.length; i++) {

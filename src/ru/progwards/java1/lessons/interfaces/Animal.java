@@ -112,7 +112,7 @@ public class Animal implements FoodCompare, CompareWeight {
         System.out.println(new Cow(33).equals(new Duck(33)));//false - these objects are different and they are not equal
         System.out.println(new Cow(2D).getFoodPrice());
         System.out.println(new Animal(1D).compareFoodPrice(new Cow(1D)));
-        // System.out.println(new Animal(1).compareWeight(2));
+       // System.out.println(new Animal(1).compareWeight(HAY));
 
     }
 }
